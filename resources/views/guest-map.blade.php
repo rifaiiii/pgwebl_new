@@ -179,20 +179,20 @@
         var drawnItems = new L.FeatureGroup();
         map.addLayer(drawnItems);
 
-        var drawControl = new L.Control.Draw({
-            draw: {
-                position: 'topleft',
-                polyline: true,
-                polygon: true,
-                rectangle: true,
-                circle: false,
-                marker: true,
-                circlemarker: false
-            },
-            edit: false
-        });
+        // var drawControl = new L.Control.Draw({
+        //     draw: {
+        //         position: 'topleft',
+        //         polyline: true,
+        //         polygon: true,
+        //         rectangle: true,
+        //         circle: false,
+        //         marker: true,
+        //         circlemarker: false
+        //     },
+        //     edit: false
+        // });
 
-        map.addControl(drawControl);
+        // map.addControl(drawControl);
 
         map.on('draw:created', function(e) {
             var type = e.layerType,
@@ -253,13 +253,13 @@
                     "' width='250' alt=''>" + "<br>" +
                     "<div class='row mt-4'>" +
                     "<div class='col-6 text-center'>" +
-                    "<a href='" + routeedit +
-                    "' class='btn btn-warning btn-sm'><i class='fa-solid fa-pen-to-square'></i></a>" +
-                    "</div>" +
-                    "<div class='col-6 text-center'>" +
-                    "<form method='POST' action='" + routedelete + "'>" +
-                    '@csrf' + '@method('DELETE')' +
-                    "<button type='submit' class='btn btn-sm btn-danger' onclick='return confirm(`Tenan Meh Dihapus?`)'><i class='fa-solid fa-trash-can'></i></button>" +
+                    // "<a href='" + routeedit +
+                    // "' class='btn btn-warning btn-sm'><i class='fa-solid fa-pen-to-square'></i></a>" +
+                    // "</div>" +
+                    // "<div class='col-6 text-center'>" +
+                    // "<form method='POST' action='" + routedelete + "'>" +
+                    // '@csrf' + '@method('DELETE')' +
+                    // "<button type='submit' class='btn btn-sm btn-danger' onclick='return confirm(`Tenan Meh Dihapus?`)'><i class='fa-solid fa-trash-can'></i></button>" +
                     "</form>" +
                     "</div>" +
                     "</div>";
@@ -303,15 +303,15 @@
                     "Dibuat: " + feature.properties.created_at + "<br>" +
                     "<img src='{{ asset('storage/images/') }}/" + feature.properties.image +
                     "' width='250' alt=''><br>" +
-                    "<div class='row mt-4'>" +
-                        "<div class='col-6 text-center'>" +
-                            "<a href='" + routeedit +
-                            "' class='btn btn-warning btn-sm'><i class='fa-solid fa-pen-to-square'></i></a>" +
-                        "</div>" +
-                        "<div class='col-6 text-center'>" +
-                    "<form method='POST' action='" + routedelete + "'>" +
-                    '@csrf' + '@method('DELETE')' +
-                    "<button type='submit' class='btn btn-sm btn-danger' onclick='return confirm(`Tenan Meh Dihapus?`)'><i class='fa-solid fa-trash-can'></i></button>" +
+                    // "<div class='row mt-4'>" +
+                    //     "<div class='col-6 text-center'>" +
+                    //         "<a href='" + routeedit +
+                    //         "' class='btn btn-warning btn-sm'><i class='fa-solid fa-pen-to-square'></i></a>" +
+                    //     "</div>" +
+                    //     "<div class='col-6 text-center'>" +
+                    // "<form method='POST' action='" + routedelete + "'>" +
+                    // '@csrf' + '@method('DELETE')' +
+                    // "<button type='submit' class='btn btn-sm btn-danger' onclick='return confirm(`Tenan Meh Dihapus?`)'><i class='fa-solid fa-trash-can'></i></button>" +
                     "</form>"+
                     "</div>" +
                     "</div>";
@@ -357,15 +357,15 @@
                     "Dibuat: " + feature.properties.created_at + "<br>" +
                     "<img src='{{ asset('storage/images/') }}/" + feature.properties.image +
                     "' width='250' alt=''><br>" +
-                    "<div class='row mt-4'>" +
-                        "<div class='col-6 text-center'>" +
-                            "<a href='" + routeedit +
-                            "' class='btn btn-warning btn-sm'><i class='fa-solid fa-pen-to-square'></i></a>" +
-                        "</div>" +
-                        "<div class='col-6 text-center'>" +
-                    "<form method='POST' action='" + routedelete + "'>" +
-                    '@csrf' + '@method('DELETE')' +
-                    "<button type='submit' class='btn btn-sm btn-danger' onclick='return confirm(`Tenan Meh Dihapus?`)'><i class='fa-solid fa-trash-can'></i></button>" +
+                    // "<div class='row mt-4'>" +
+                    //     "<div class='col-6 text-center'>" +
+                    //         "<a href='" + routeedit +
+                    //         "' class='btn btn-warning btn-sm'><i class='fa-solid fa-pen-to-square'></i></a>" +
+                    //     "</div>" +
+                    //     "<div class='col-6 text-center'>" +
+                    // "<form method='POST' action='" + routedelete + "'>" +
+                    // '@csrf' + '@method('DELETE')' +
+                    // "<button type='submit' class='btn btn-sm btn-danger' onclick='return confirm(`Tenan Meh Dihapus?`)'><i class='fa-solid fa-trash-can'></i></button>" +
                     "</form>"+
                     "</div>" +
                     "</div>";

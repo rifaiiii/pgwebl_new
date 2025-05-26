@@ -24,7 +24,11 @@ class PointsController extends Controller
         $data = [
             'title' => 'Map',
         ];
-        return view('map', $data);
+        if (auth()->check()) {
+            return view('map', $data);
+        } else {
+            return view('guest-map', $data);
+        }
     }
 
     /**
